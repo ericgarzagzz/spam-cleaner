@@ -28,3 +28,7 @@ go.work
 
 # Binaries inside bin folder
 bin/**
+
+# Google API credentials file and generated oauth token
+credentials.json
+token.json
