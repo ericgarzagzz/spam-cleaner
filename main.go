@@ -73,5 +73,11 @@ func main() {
 	}
 	client := getClient(config)
 
-	ReadMessages(client)
+	msgs := ReadMessages(client)
+
+	for _, msg := range msgs {
+		if msg.UnsubscribeLinkType != None {
+			fmt.Printf("%s\n", msg.MarkdownString())
+		}
+	}
 }
